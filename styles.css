@@ -1,0 +1,288 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.online {
+  width: 228px;
+  height: 64px;
+  border-radius: 55px;
+  padding: 20px 40px;
+  border: 1px solid white;
+  margin: 1rem auto;
+  text-align: center;
+  /*additional */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.green-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(69, 183, 69);
+  border-radius: 50%;
+}
+
+.header-content {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: absolute;
+  top: 200px;
+  left: 260px;
+}
+
+.header-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.header-content h1 {
+  margin: 2rem 0;
+  font-size: 4.5rem;
+  width: 100%;
+}
+
+section {
+  width: 80%;
+  margin: 2rem auto 6rem auto;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.part-1 .title {
+  text-align: right;
+}
+
+section.part-2 {
+  padding-top: 8rem;
+}
+
+.part-2 .title {
+  text-align: left;
+}
+
+.part-1 .part-1-content,
+.part-2 .part-2-content {
+  width: 70%;
+  margin-top: 2rem;
+}
+
+section p {
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+.projects {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 200px);
+  column-gap: 4rem;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.projects .project img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*Check Code Below*/
+
+.part-2 .projects .project a {
+  float: left;
+  padding-top: 1rem;
+}
+
+.project-1 {
+  grid-area: 1/1/2/2;
+}
+.project-2 {
+  grid-area: 2/2/3/3;
+}
+.project-3 {
+  grid-area: 3/1/4/2;
+}
+.project-4 {
+  grid-area: 4/2/5/3;
+}
+
+.contact {
+  padding-top: 8rem;
+}
+
+.contact h1 {
+  font-size: 6rem;
+  margin-top: 4rem;
+}
+
+.contact .divider {
+  margin-top: 2rem;
+}
+
+.contact-means {
+  margin-top: 9rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  flex-basis: 70%;
+}
+
+.inputs {
+  width: 100%;
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+form button {
+  display: block;
+  margin-top: 5rem;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  outline: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-links {
+  margin-bottom: 2rem;
+}
+
+.socials-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.links p {
+  text-decoration: underline;
+  color: grey;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 850px) {
+  .projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+  }
+  .project {
+    width: 100%;
+  }
+  .project-1,
+  .project-2,
+  .project-3,
+  .project-4 {
+    grid-area: unset;
+    margin-bottom: 1.5rem;
+  }
+  .contact {
+    padding-top: 4rem;
+  }
+  .contact h1 {
+    font-size: 4rem;
+    margin-top: 2rem;
+  }
+  .contact-means {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  section.part-1,
+  section.part-2 {
+    padding: 1rem;
+  }
+  .part-1 .part-1-content {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  header {
+    padding: 0 1rem;
+  }
+  .header-content {
+    width: 100%;
+    padding: 0 1rem;
+    max-width: 300px;
+    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    left: 0;
+  }
+  .header-content h1 {
+    font-size: 2rem;
+  }
+}
